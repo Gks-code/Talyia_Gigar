@@ -5,7 +5,7 @@ const produtos = [
         nome: "Whisky Johnnie Walker Blue Label",
         descricao: "Blended Scotch Whisky de luxo com sabores complexos.",
         preco: "R$ 1.899,90",
-        imagem: "assets/img/1.jpg" 
+        imagem: "assets/img/1.jpg"
     },
     {
         id: 2,
@@ -72,8 +72,6 @@ async function carregarProdutosDestaque() {
 function adicionarAoCarrinho(id) {
     const produto = produtos.find(p => p.id === id);
     if (produto) {
-        // Aqui você pode implementar a lógica real do carrinho
-        alert(`${produto.nome} foi adicionado ao carrinho!\nPreço: ${produto.preco}`);
         
         // Exemplo: adicionar ao localStorage
         let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
