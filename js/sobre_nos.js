@@ -15,12 +15,5 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Atualizar contador do carrinho
-function atualizarContadorCarrinho() {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    const totalItens = carrinho.reduce((total, item) => total + (item.quantidade || 1), 0);
-    document.getElementById('cart-count').textContent = totalItens;
-}
 
-// Inicializar
-document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
+

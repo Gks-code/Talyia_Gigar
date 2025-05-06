@@ -68,17 +68,7 @@ async function carregarProdutosDestaque() {
     }
 }
 
-// Função para adicionar ao carrinho
-function adicionarAoCarrinho(id) {
-    const produto = produtos.find(p => p.id === id);
-    if (produto) {
-        
-        // Exemplo: adicionar ao localStorage
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        carrinho.push(produto);
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    }
-}
+
 
 // Menu Mobile
 const burger = document.querySelector('.burger');
